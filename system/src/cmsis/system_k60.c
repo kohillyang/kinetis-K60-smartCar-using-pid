@@ -7,9 +7,10 @@
 
 
 
-
+#include "wdog.h"
 void SystemInit (void){
-
+	wdog_unlock();
+	wdog_disable();
 }
 void SystemCoreClockUpdate (void){
 
