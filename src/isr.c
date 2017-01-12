@@ -5,8 +5,10 @@ extern u8  IMG_finish;  //引用主函数中定义的变量
 extern u8  IMG_get;
 extern int  H_count;
 //extern u8 cmdBuff[10];
-extern u8 Cmd;
- 
+u8 Cmd;
+u8  IMG_get = 0;                    //开始采集图像标记
+int  H_count = 1;                   //当前采集行数
+
  /**  
  author:cong
  version:1.0

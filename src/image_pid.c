@@ -24,7 +24,7 @@ typedef struct
 }PID_PROCESS_Typedef;
 
 static PID_PROCESS_Typedef pid_process={
-	.k = 40.0f,
+	.k = 50.2f,
 	.i = 0.02f,
 	.integration = .0f,
 };
@@ -46,6 +46,6 @@ uint32_t image_pid_update(const uint8_t *image){
 	LIMIT_SCOPE(pid_process.integration , -10,+10);
 
 	int32_t r = pid_process.k * (delta) + pid_process.i*(pid_process.integration);
-	LIMIT_SCOPE(r,-15,+15);
-	return  (r + 173);
+	LIMIT_SCOPE(r,-20,+20);
+	return  (r + 95);
 }
